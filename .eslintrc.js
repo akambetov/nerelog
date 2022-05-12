@@ -26,6 +26,7 @@ module.exports = {
         'import/prefer-default-export': 'off',
         'react/jsx-props-no-spreading': 'off',
         'react/function-component-definition': 'off',
+        'object-curly-newline': 'off',
         'padding-line-between-statements': [
             'warn',
             { blankLine: 'always', prev: '*', next: ['return', 'if', 'export', 'try'] }
