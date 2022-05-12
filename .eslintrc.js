@@ -19,21 +19,16 @@ module.exports = {
         }
     },
     rules: {
-        semi: ['error', 'never'],
-        'comma-dangle': ['error', 'never'],
-        'react/function-component-definition': [
-            'error',
-            {
-                namedComponents: ['arrow-function'],
-                unnamedComponents: ['arrow-function']
-            }
-        ],
+        indent: 'off',
+        'react/jsx-indent': 'off',
+        semi: 'off',
+        'comma-dangle': 'off',
         'import/prefer-default-export': 'off',
+        'react/jsx-props-no-spreading': 'off',
+        'react/function-component-definition': 'off',
         'padding-line-between-statements': [
             'warn',
             { blankLine: 'always', prev: '*', next: ['return', 'if', 'export', 'try'] }
-        ],
-        indent: ['warn', 4],
-        'react/jsx-indent': ['warn', 4]
+        ]
     }
 }
