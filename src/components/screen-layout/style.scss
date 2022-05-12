@@ -1,7 +1,25 @@
 .layout {
-  display: grid;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: red;
+  background-color: lightblue;
+}
+
+.header, .content, .footer {
+  padding: 0 20px;
+}
+
+.header {
+  background-color: hotpink;
+}
+
+.content {
+  flex-grow: 1;
+  background-color: chartreuse;
+}
+
+.footer {
+  position: sticky;
+  bottom: 0;
+  background-color: firebrick;
 }
