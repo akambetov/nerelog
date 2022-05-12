@@ -1,3 +1,9 @@
 import React from 'react'
 
-export default () => <h1>Hello</h1>
+import ScreenLayout from '../../components/screen-layout'
+
+export default () => (
+    <ScreenLayout>
+        <h1>Hello</h1>
+    </ScreenLayout>
+)
