@@ -8,7 +8,10 @@ export default () => (
         <ScreenLayout.Header title="Header" />
         <ScreenLayout.Content>
             <h1>Content</h1>
-            <Card />
+            <Card>
+                <Card.Title title="card title" />
+                <Card.Content content="card content" />
+            </Card>
             <div>
                 <p>
                     Cupidatat aute aliqua velit commodo est deserunt quis minim in aute. Veniam
