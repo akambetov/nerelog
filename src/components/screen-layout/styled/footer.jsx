@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import propTypes from 'prop-types'
 
 import withTheme from '../../../hocks/with-theme'
 import style from './style.scss'
@@ -11,5 +11,5 @@ export const FooterStyled = withTheme(({ children, theme }) => (
 ))
 
 FooterStyled.propTypes = {
-    children: PropTypes.node.isRequired
+    children: propTypes.node.isRequired
 }

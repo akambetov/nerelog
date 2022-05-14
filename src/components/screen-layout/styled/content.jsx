@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import propTypes from 'prop-types'
 
 import style from './style.scss'
 import withTheme from '../../../hocks/with-theme'
@@ -11,5 +11,5 @@ export const ContentStyled = withTheme(({ theme, children }) => (
 ))
 
 ContentStyled.propTypes = {
-    children: PropTypes.node.isRequired
+    children: propTypes.node.isRequired
 }

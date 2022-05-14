@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import propTypes from 'prop-types'
 
 import style from './style.scss'
 import withTheme from '../../../hocks/with-theme'
@@ -16,9 +16,9 @@ const BorderlessButtonStyled = withTheme(({ theme, title, position, onClick }) =
 ))
 
 BorderlessButtonStyled.propTypes = {
-    title: PropTypes.string.isRequired,
-    position: PropTypes.string,
-    onClick: PropTypes.func
+    title: propTypes.string.isRequired,
+    position: propTypes.string,
+    onClick: propTypes.func
 }
 
 BorderlessButtonStyled.defaultProps = {
