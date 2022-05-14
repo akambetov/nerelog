@@ -1,14 +1,14 @@
 import React from 'react'
 
-import { LayoutStyled, HeaderStyled, ContentStyled, FooterStyled } from './style'
+import { LayoutStyled, HeaderStyled, ContentStyled, FooterStyled } from './styled'
 
-const ScreenLayout = ({ ...rest }) => <LayoutStyled {...rest} />
+const ScreenLayout = ({ ...props }) => <LayoutStyled {...props} />
 
-const HeaderSection = ({ ...rest }) => <HeaderStyled {...rest} />
+const HeaderSection = ({ ...props }) => <HeaderStyled {...props} />
 
-const ContentSection = ({ ...rest }) => <ContentStyled {...rest} />
+const ContentSection = ({ ...props }) => <ContentStyled {...props} />
 
-const FooterSection = ({ ...rest }) => <FooterStyled {...rest} />
+const FooterSection = ({ ...props }) => <FooterStyled {...props} />
 
 ScreenLayout.Header = HeaderSection
 ScreenLayout.Content = ContentSection
