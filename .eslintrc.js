@@ -28,6 +28,7 @@ module.exports = {
         'react/function-component-definition': 'off',
         'object-curly-newline': 'off',
         'react/forbid-prop-types': 'off',
+        'implicit-arrow-linebreak': 'off',
         'padding-line-between-statements': [
             'warn',
             { blankLine: 'always', prev: '*', next: ['return', 'if', 'export', 'try'] }
