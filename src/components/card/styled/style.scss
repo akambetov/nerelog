@@ -1,5 +1,15 @@
-.container {
+.card-container {
   display: flex;
   flex-direction: column;
-  border: 3px solid cornflowerblue;
+  padding:15px;
+  margin: 10px;
+  width: 30vw;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid;
+  }
+  
+  @media (max-width: 720px) {  
+    width: calc(100% - 20px);
+  }
 }
