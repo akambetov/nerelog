@@ -1,0 +1,11 @@
+.list-container {
+  margin-right: 10px;
+  border: 3px solid cornflowerblue;
+  border-radius: 10px;
+  
+  @media (max-width: 720px) {  
+    height: 50vh;
+    overflow: auto;
+  }
+
+}
