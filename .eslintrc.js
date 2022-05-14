@@ -21,6 +21,7 @@ module.exports = {
     rules: {
         indent: 'off',
         'react/jsx-indent': 'off',
+        'react/jsx-indent-props': 'off',
         semi: 'off',
         'comma-dangle': 'off',
         'import/prefer-default-export': 'off',
@@ -29,6 +30,7 @@ module.exports = {
         'object-curly-newline': 'off',
         'react/forbid-prop-types': 'off',
         'implicit-arrow-linebreak': 'off',
+        'no-confusing-arrow': ['error', { onlyOneSimpleParam: true }],
         'padding-line-between-statements': [
             'warn',
             { blankLine: 'always', prev: '*', next: ['return', 'if', 'export', 'try'] }
