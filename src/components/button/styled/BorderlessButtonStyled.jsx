@@ -7,7 +7,12 @@ import withTheme from '../../../hocks/with-theme'
 const BorderlessButtonStyled = withTheme(({ theme, title, position, onClick }) => (
     <button
         className={style.borderless}
-        style={{ backgroundColor: theme.noColor, color: theme.primary, position }}
+        style={{
+            backgroundColor: theme.noColor,
+            color: theme.primary,
+            position,
+            zIndex: position !== 'static' && 1000
+        }}
         type="button"
         onClick={onClick}
     >

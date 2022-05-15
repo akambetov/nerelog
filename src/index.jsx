@@ -24,7 +24,7 @@ const App = () => {
 
     return (
         <ThemeContext.Provider value={theme}>
-            <BorderlessButton title={mode} onClick={onThemeChange} position="absolute" />
+            <BorderlessButton title={mode} position="absolute" onClick={onThemeChange} />
             <Router>
                 <AppRoutes />
             </Router>
