@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
 
 import ScreenLayout from '../../components/screen-layout'
 import Card from '../../components/card'
@@ -30,9 +30,13 @@ export default () => {
         currencyDisplay: 'narrowSymbol'
     })
 
-    window.addEventListener('resize', () => {
-        setFlexDirection(window.innerWidth < 720 ? 'column' : 'row')
-    })
+    const onResize = () => setFlexDirection(window.innerWidth < 720 ? 'column' : 'row')
+
+    useEffect(() => {
+        window.addEventListener('resize', onResize)
+
+        return () => window.removeEventListener('resize', onResize)
+    }, [])
 
     return (
         <ScreenLayout>
