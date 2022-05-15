@@ -1,7 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react'
 
 import ScreenLayout from '../../components/screen-layout'
-import Card from '../../components/card'
 import { Flex } from '../../components/flex'
 import { List } from '../../components/list'
 
@@ -23,13 +22,6 @@ export default () => {
         [apps, clients]
     )
 
-    const formatter = new Intl.NumberFormat(['kk', 'ru-RU'], {
-        style: 'currency',
-        currency: 'KZT',
-        minimumFractionDigits: 0,
-        currencyDisplay: 'narrowSymbol'
-    })
-
     const onResize = () => setFlexDirection(window.innerWidth < 720 ? 'column' : 'row')
 
     useEffect(() => {
@@ -44,15 +36,7 @@ export default () => {
             <ScreenLayout.Content>
                 <h1>Content</h1>
                 <Flex direction={flexDirection}>
-                    <List>
-                        {mappedData.map((data) => (
-                            <Card key={data.appData.id}>
-                                <Card.Title title={data.clientData.name} />
-                                <Card.Content content={data.appData.type} />
-                                <Card.Content content={formatter.format(data.appData.price)} />
-                            </Card>
-                        ))}
-                    </List>
+                    <List list={mappedData} />
                     <div>
                         <p>
                             Cupidatat aute aliqua velit commodo est deserunt quis minim in aute.
