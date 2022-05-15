@@ -10,7 +10,7 @@ import clientsData from '../../mock-data/NeRelog_clients.json'
 export default () => {
     const [apps] = useState(appsData)
     const [clients] = useState(clientsData)
-    const [flexDirection, setFlexDirection] = useState(window.innerWidth < 720 ? 'column' : 'row')
+    const [flexDirection, setFlexDirection] = useState(window.innerWidth < 990 ? 'column' : 'row')
 
     const mappedData = useMemo(
         () =>
@@ -22,7 +22,7 @@ export default () => {
         [apps, clients]
     )
 
-    const onResize = () => setFlexDirection(window.innerWidth < 720 ? 'column' : 'row')
+    const onResize = () => setFlexDirection(window.innerWidth < 990 ? 'column' : 'row')
 
     useEffect(() => {
         window.addEventListener('resize', onResize)
@@ -34,10 +34,79 @@ export default () => {
         <ScreenLayout>
             <ScreenLayout.Header title="Header" />
             <ScreenLayout.Content>
-                <h1>Content</h1>
                 <Flex direction={flexDirection}>
                     <List list={mappedData} />
                     <div>
+                        <p>
+                            Cupidatat aute aliqua velit commodo est deserunt quis minim in aute.
+                            Veniam occaecat amet ullamco laboris in incididunt reprehenderit id ut.
+                            Commodo aliqua ullamco ex ea velit qui aute tempor fugiat aliquip velit.
+                            Sint culpa et enim nulla proident ipsum quis aute nostrud dolore. Labore
+                            magna eiusmod officia nisi labore non aute commodo excepteur et laboris
+                            laborum ullamco laborum. Adipisicing deserunt minim esse consectetur
+                            incididunt amet exercitation anim ea. Reprehenderit aliqua qui sint
+                            fugiat Lorem non cupidatat sit eiusmod ullamco in.
+                        </p>
+                        <p>
+                            Cupidatat aute aliqua velit commodo est deserunt quis minim in aute.
+                            Veniam occaecat amet ullamco laboris in incididunt reprehenderit id ut.
+                            Commodo aliqua ullamco ex ea velit qui aute tempor fugiat aliquip velit.
+                            Sint culpa et enim nulla proident ipsum quis aute nostrud dolore. Labore
+                            magna eiusmod officia nisi labore non aute commodo excepteur et laboris
+                            laborum ullamco laborum. Adipisicing deserunt minim esse consectetur
+                            incididunt amet exercitation anim ea. Reprehenderit aliqua qui sint
+                            fugiat Lorem non cupidatat sit eiusmod ullamco in.
+                        </p>
+                        <p>
+                            Cupidatat aute aliqua velit commodo est deserunt quis minim in aute.
+                            Veniam occaecat amet ullamco laboris in incididunt reprehenderit id ut.
+                            Commodo aliqua ullamco ex ea velit qui aute tempor fugiat aliquip velit.
+                            Sint culpa et enim nulla proident ipsum quis aute nostrud dolore. Labore
+                            magna eiusmod officia nisi labore non aute commodo excepteur et laboris
+                            laborum ullamco laborum. Adipisicing deserunt minim esse consectetur
+                            incididunt amet exercitation anim ea. Reprehenderit aliqua qui sint
+                            fugiat Lorem non cupidatat sit eiusmod ullamco in.
+                        </p>
+                        <p>
+                            Cupidatat aute aliqua velit commodo est deserunt quis minim in aute.
+                            Veniam occaecat amet ullamco laboris in incididunt reprehenderit id ut.
+                            Commodo aliqua ullamco ex ea velit qui aute tempor fugiat aliquip velit.
+                            Sint culpa et enim nulla proident ipsum quis aute nostrud dolore. Labore
+                            magna eiusmod officia nisi labore non aute commodo excepteur et laboris
+                            laborum ullamco laborum. Adipisicing deserunt minim esse consectetur
+                            incididunt amet exercitation anim ea. Reprehenderit aliqua qui sint
+                            fugiat Lorem non cupidatat sit eiusmod ullamco in.
+                        </p>
+                        <p>
+                            Cupidatat aute aliqua velit commodo est deserunt quis minim in aute.
+                            Veniam occaecat amet ullamco laboris in incididunt reprehenderit id ut.
+                            Commodo aliqua ullamco ex ea velit qui aute tempor fugiat aliquip velit.
+                            Sint culpa et enim nulla proident ipsum quis aute nostrud dolore. Labore
+                            magna eiusmod officia nisi labore non aute commodo excepteur et laboris
+                            laborum ullamco laborum. Adipisicing deserunt minim esse consectetur
+                            incididunt amet exercitation anim ea. Reprehenderit aliqua qui sint
+                            fugiat Lorem non cupidatat sit eiusmod ullamco in.
+                        </p>
+                        <p>
+                            Cupidatat aute aliqua velit commodo est deserunt quis minim in aute.
+                            Veniam occaecat amet ullamco laboris in incididunt reprehenderit id ut.
+                            Commodo aliqua ullamco ex ea velit qui aute tempor fugiat aliquip velit.
+                            Sint culpa et enim nulla proident ipsum quis aute nostrud dolore. Labore
+                            magna eiusmod officia nisi labore non aute commodo excepteur et laboris
+                            laborum ullamco laborum. Adipisicing deserunt minim esse consectetur
+                            incididunt amet exercitation anim ea. Reprehenderit aliqua qui sint
+                            fugiat Lorem non cupidatat sit eiusmod ullamco in.
+                        </p>
+                        <p>
+                            Cupidatat aute aliqua velit commodo est deserunt quis minim in aute.
+                            Veniam occaecat amet ullamco laboris in incididunt reprehenderit id ut.
+                            Commodo aliqua ullamco ex ea velit qui aute tempor fugiat aliquip velit.
+                            Sint culpa et enim nulla proident ipsum quis aute nostrud dolore. Labore
+                            magna eiusmod officia nisi labore non aute commodo excepteur et laboris
+                            laborum ullamco laborum. Adipisicing deserunt minim esse consectetur
+                            incididunt amet exercitation anim ea. Reprehenderit aliqua qui sint
+                            fugiat Lorem non cupidatat sit eiusmod ullamco in.
+                        </p>
                         <p>
                             Cupidatat aute aliqua velit commodo est deserunt quis minim in aute.
                             Veniam occaecat amet ullamco laboris in incididunt reprehenderit id ut.
