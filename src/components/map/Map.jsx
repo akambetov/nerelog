@@ -4,7 +4,7 @@ import 'leaflet/dist/leaflet.css'
 
 const style = {
     width: '100%',
-    height: '300px'
+    height: '100vh'
 }
 
 export const Map = () => {
