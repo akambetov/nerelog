@@ -30,6 +30,7 @@ module.exports = {
         'object-curly-newline': 'off',
         'react/forbid-prop-types': 'off',
         'implicit-arrow-linebreak': 'off',
+        'function-paren-newline': 'off',
         'no-confusing-arrow': ['error', { onlyOneSimpleParam: true }],
         'padding-line-between-statements': [
             'warn',
