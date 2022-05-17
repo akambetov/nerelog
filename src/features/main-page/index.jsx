@@ -23,6 +23,18 @@ export default () => {
         [apps, clients]
     )
 
+    const coordsData = useMemo(
+        () =>
+            mappedData.map((data) => ({
+                coords: data.appData.coords,
+                oredrInfo: {
+                    id: data.appData.id,
+                    clinetName: data.clientData.name
+                }
+            })),
+        [mappedData]
+    )
+
     const onResize = () => setFlexDirection(window.innerWidth < 990 ? 'column' : 'row')
 
     useEffect(() => {
@@ -37,7 +49,7 @@ export default () => {
             <ScreenLayout.Content>
                 <Flex direction={flexDirection}>
                     <List list={mappedData} />
-                    <Map />
+                    <Map coordsData={coordsData} />
                 </Flex>
             </ScreenLayout.Content>
             <ScreenLayout.Footer>
