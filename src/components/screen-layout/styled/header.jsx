@@ -1,7 +1,7 @@
 import React from 'react'
 import propTypes from 'prop-types'
 
-import withTheme from '../../../hocks/with-theme'
+import withTheme from '../../../hocs/with-theme'
 import style from './style.scss'
 
 export const HeaderStyled = withTheme(

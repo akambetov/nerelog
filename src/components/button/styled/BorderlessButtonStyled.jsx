@@ -2,7 +2,7 @@ import React from 'react'
 import propTypes from 'prop-types'
 
 import style from './style.scss'
-import withTheme from '../../../hocks/with-theme'
+import withTheme from '../../../hocs/with-theme'
 
 const BorderlessButtonStyled = withTheme(({ theme, title, position, onClick }) => (
     <button
