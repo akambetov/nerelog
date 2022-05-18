@@ -29,6 +29,7 @@ export default () => {
                 coords: data.appData.coords,
                 oredrInfo: {
                     id: data.appData.id,
+                    price: data.appData.price,
                     clinetName: data.clientData.name
                 }
             })),

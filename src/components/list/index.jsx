@@ -9,6 +9,7 @@ import propTypes from 'prop-types'
 
 import Card from '../card'
 import { ListStyled } from './styled'
+import formatMoney from '../../helpers/formatter'
 
 export const List = ({ list }) => {
     const cache = useRef(
@@ -17,12 +18,6 @@ export const List = ({ list }) => {
             defaultHeight: 200
         })
     )
-    const formatter = new Intl.NumberFormat(['kk', 'ru-RU'], {
-        style: 'currency',
-        currency: 'KZT',
-        minimumFractionDigits: 0,
-        currencyDisplay: 'narrowSymbol'
-    })
 
     const rowRenderer = ({ key, index, style, parent, height }) => {
         const listItem = list[index]
@@ -39,7 +34,7 @@ export const List = ({ list }) => {
                     <Card style={{ height: { height } }}>
                         <Card.Title title={listItem.clientData.name} />
                         <Card.Content content={listItem.appData.type} />
-                        <Card.Content content={formatter.format(listItem.appData.price)} />
+                        <Card.Content content={formatMoney(listItem.appData.price)} />
                     </Card>
                 </div>
             </CellMeasurer>

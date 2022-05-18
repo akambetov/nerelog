@@ -8,6 +8,8 @@ import 'leaflet.markercluster/dist/leaflet.markercluster'
 import 'leaflet.markercluster/dist/MarkerCluster.css'
 import 'leaflet.markercluster/dist/MarkerCluster.Default.css'
 
+import formatMoney from '../../helpers/formatter'
+
 const style = {
     width: '100%',
     height: '100vh'
@@ -15,7 +17,6 @@ const style = {
 
 export const Map = ({ coordsData }) => {
     const mapRef = useRef(null)
-
     // create map
     const createMap = useCallback(() => {
         const map = L.map(mapRef.current).setView([43.238949, 76.889709], 12)
@@ -26,7 +27,7 @@ export const Map = ({ coordsData }) => {
         const markersGroup = L.markerClusterGroup({ chunkedLoading: true })
         const markers = coordsData.map(({ coords, oredrInfo }) =>
             L.marker([coords.lat, coords.long], { icon: defaultIcon }).bindPopup(
-                `${oredrInfo.id}.<br>${oredrInfo.clinetName}.`
+                `${oredrInfo.id}.<br>${oredrInfo.clinetName}.<br>${formatMoney(oredrInfo.price)}.`
             )
         )
 
